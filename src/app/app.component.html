@@ -1,7 +1,7 @@
-<mat-sidenav-container class="account-container" (backdropClick)="close('backdrop')">
-  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+<mat-sidenav-container class="account-container" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
     <p>
-      <button mat-button (click)="close('toggle button')">Close</button>
+      <button mat-button (click)="close()">Close</button>
     </p>
     <div class="content">
 
@@ -12,7 +12,7 @@
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
     <p>
-      <button mat-button (click)="sidenav.open()">Open</button>
+      <button mat-button (click)="open()">Open</button>
     </p>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { SidenavService } from './shared/Sidenav.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,18 @@ import { SidenavService } from './shared/Sidenav.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'app';
   @ViewChild('sidenav') sidenav: MatSidenav;
 
-  constructor(private sidenavService: SidenavService) { }
+  sidenavOpened = false;
 
-  ngOnInit(): void {
-    this.sidenavService.setSidenav(this.sidenav);
+  close() {
+    this.sidenavOpened = false;
+    this.sidenav.close();
+  }
+
+  open() {
+    this.sidenavOpened = true;
+    this.sidenav.open();
   }
 }
