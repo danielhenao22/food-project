@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { LoginModule } from './login/login.module';
 import { SingUpModule } from './sing-up/sing-up.module';
 import { HomeModule } from './home/home.module';
+import { SidenavService } from './shared/Sidenav.service';
 
 
 
@@ -27,7 +28,7 @@ import { HomeModule } from './home/home.module';
     SingUpModule,
     HomeModule
   ],
-  providers: [],
+  providers: [SidenavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

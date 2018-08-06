@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { MatSidenav } from '@angular/material/sidenav';
+import { Component, OnInit } from '@angular/core';
+import { SidenavService } from '../Sidenav.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,20 +8,15 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @ViewChild('sidenav') sidenav: MatSidenav;
-  sidenavOpened = false;
-  constructor(private router: Router) { }
+  toggleActive = false;
+  constructor(private sidenav: SidenavService) { }
 
   ngOnInit() {
   }
-
-  close() {
-    this.sidenavOpened = false;
-    this.sidenav.close();
-  }
-
-  open() {
-    this.sidenavOpened = true;
+  toggleRightSidenav() {
+    this.toggleActive = !this.toggleActive;
     this.sidenav.open();
+
+    console.log('Clicked');
   }
 }
