@@ -1,16 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
-
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class MenuComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
   sidenavOpened = false;
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }

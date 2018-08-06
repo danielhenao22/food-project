@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PersonalizationComponent } from './personalization.component';
+import { LeftBoardComponent } from './left-board.component';
 
-describe('PersonalizationComponent', () => {
-  let component: PersonalizationComponent;
-  let fixture: ComponentFixture<PersonalizationComponent>;
+describe('LeftBoardComponent', () => {
+  let component: LeftBoardComponent;
+  let fixture: ComponentFixture<LeftBoardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonalizationComponent ]
+      declarations: [ LeftBoardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PersonalizationComponent);
+    fixture = TestBed.createComponent(LeftBoardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

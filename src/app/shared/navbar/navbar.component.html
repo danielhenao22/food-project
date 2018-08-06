@@ -1,16 +1,37 @@
-<div class="general">
-  <header class="header marger-interno">
-    <div class="menu">
-      <div class="logo">
-          <i class="fas fa-align-justify openMenu"></i><a class="app-name" routerLink="/start">FoodAppName</a>
-      </div>
-      <nav class="nav">
-        <a routerLink="/home">
-          <i class="fas fa-home"></i>Inicio</a>
-        <a routerLink="/login">
-          <i class="fas fa-user-tie"></i>Ingresar</a>
-      </nav>
-    </div>
-  </header>
 
-</div>
+
+<mat-sidenav-container class="account-container" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+    <button mat-button (click)="close()">Close</button>
+    <div class="content"></div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+
+
+      <div class="general">
+          <header class="header marger-interno">
+            <div class="menu">
+              <div class="logo">
+                  <i class="fas fa-align-justify openMenu" (click)="open()"></i><a class="app-name" routerLink="/start">FoodAppName</a>
+              </div>
+              <nav class="nav">
+                <a routerLink="/home">
+                  <i class="fas fa-home"></i>Inicio</a>
+                <a routerLink="/login">
+                  <i class="fas fa-user-tie"></i>Ingresar</a>
+              </nav>
+            </div>
+          </header>
+        
+        </div>
+
+
+
+    <p>
+      <button mat-button (click)="open()">Open</button>
+    </p>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

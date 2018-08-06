@@ -1,0 +1,13 @@
+<mat-sidenav-container class="account-container" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+    <button mat-button (click)="close()">Close</button>
+    <div class="content"></div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="open()">Open</button>
+    </p>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

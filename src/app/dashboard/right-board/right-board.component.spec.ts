@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPanelComponent } from './main-panel.component';
+import { RightBoardComponent } from './right-board.component';
 
-describe('MainPanelComponent', () => {
-  let component: MainPanelComponent;
-  let fixture: ComponentFixture<MainPanelComponent>;
+describe('RightBoardComponent', () => {
+  let component: RightBoardComponent;
+  let fixture: ComponentFixture<RightBoardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainPanelComponent ]
+      declarations: [ RightBoardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainPanelComponent);
+    fixture = TestBed.createComponent(RightBoardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

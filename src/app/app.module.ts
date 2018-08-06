@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LoginModule } from './login/login.module';
 import { SingUpModule } from './sing-up/sing-up.module';
+import { HomeModule } from './home/home.module';
+
 
 
 @NgModule({
@@ -20,11 +21,11 @@ import { SingUpModule } from './sing-up/sing-up.module';
     AppRoutingModule,
     BrowserModule,
     SharedModule,
-    DashboardModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     LoginModule,
-    SingUpModule
+    SingUpModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
