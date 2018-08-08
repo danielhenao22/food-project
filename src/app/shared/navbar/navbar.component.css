@@ -5,7 +5,6 @@
 
 .menu {
   background: #dd600d;
-  ;
   display: flex;
   flex-flow: row nowrap;
   height: 60px;
@@ -28,15 +27,23 @@
 .openMenu {
   margin-right: 5px;
   color: #ffffff;
+  font-size: 30px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.openMenu:hover .logo a {
-  color: #ffffff;
-  font-size: 30px;
+.openMenu:hover {
+  transition: 0.3s;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .logo a:hover {
-  color: #343434;
+  color: #643900;
+  cursor: pointer;
 }
 
 .nav a {
@@ -48,5 +55,5 @@
 }
 
 .nav a:hover {
-  color: #343434;
+  color: #643900;
 }

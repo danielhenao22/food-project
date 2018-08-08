@@ -1,23 +1,22 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { SidenavService } from './shared/Sidenav.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   @ViewChild('sidenav') sidenav: MatSidenav;
+  sidenavOpened = false;
+  constructor(private sidenavService: SidenavService) { }
 
-  reason = '';
-
-  close(reason: string) {
-    this.reason = reason;
-    this.sidenav.close();
+  ngOnInit(): void {
+    this.sidenavService.setSidenav(this.sidenav);
   }
-
-  open() {
-    this.sidenav.open();
+  close() {
+    this.sidenavService.close();
   }
 }

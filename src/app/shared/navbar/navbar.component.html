@@ -2,7 +2,8 @@
   <header class="header marger-interno">
     <div class="menu">
       <div class="logo">
-          <i class="fas fa-align-justify openMenu"></i><a class="app-name" routerLink="/start">FoodAppName</a>
+        <i class="fas fa-align-justify openMenu" (click)="toggleRightSidenav()"></i>
+        <a class="app-name" routerLink="/home">FoodAppName</a>
       </div>
       <nav class="nav">
         <a routerLink="/home">
@@ -12,5 +13,4 @@
       </nav>
     </div>
   </header>
-
 </div>

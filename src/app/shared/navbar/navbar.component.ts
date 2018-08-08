@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { SidenavService } from '../Sidenav.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  toggleActive = false;
+  constructor(private sidenav: SidenavService) { }
 
   ngOnInit() {
   }
+  toggleRightSidenav() {
+    this.toggleActive = !this.toggleActive;
+    this.sidenav.open();
 
+    console.log('Clicked');
+  }
 }

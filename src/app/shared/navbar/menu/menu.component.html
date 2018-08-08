@@ -1,15 +1,13 @@
 <mat-sidenav-container class="account-container" (backdropClick)="close()">
   <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
-      <p>
-          <i class="fas fa-times closeIcon" (click)="close()"></i>
-      </p>
+    <button mat-button (click)="close()">Close</button>
     <div class="content"></div>
   </mat-sidenav>
+
   <mat-sidenav-content>
-
-    <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
-
+    <p>
+      <button mat-button (click)="open()">Open</button>
+    </p>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

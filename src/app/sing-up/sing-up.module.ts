@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SingInComponent } from './sing-in/sing-in.component';
+import { SingUpComponent } from './sing-up.component';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [{ path: '', component: SingInComponent }];
+const routes: Routes = [{ path: '', component: SingUpComponent }];
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SingInComponent],
-  exports: [SingInComponent]
+  declarations: [SingUpComponent],
+  exports: [SingUpComponent]
 })
-export class LoginModule { }
+export class SingUpModule { }
