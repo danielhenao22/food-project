@@ -1,3 +1,37 @@
-<p>
-  left-board works!
-</p>
+<div class="left-panel">
+  <div class="expansionPanel"  >
+    <mat-accordion >
+      <mat-expansion-panel *ngFor="let recipe of recipesList" (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{recipe.name}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{recipe.description}}  Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="information" *ngFor = "let ingredient of recipe.ingredients">
+          <li class="ingredients">
+            {{ingredient.name}}  
+          </li>       
+           <p class="quantity"> {{ingredient.quantity}} units </p>
+          
+        </div>
+      </mat-expansion-panel>
+<!--
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Self aware panel
+          </mat-panel-title>
+          <mat-panel-description>
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    -->
+    </mat-accordion>
+  </div>
+</div>

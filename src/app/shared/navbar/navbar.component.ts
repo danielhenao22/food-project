@@ -16,7 +16,5 @@ export class NavbarComponent implements OnInit {
   toggleRightSidenav() {
     this.toggleActive = !this.toggleActive;
     this.sidenav.open();
-
-    console.log('Clicked');
   }
 }

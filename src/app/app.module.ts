@@ -10,8 +10,7 @@ import { LoginModule } from './login/login.module';
 import { SingUpModule } from './sing-up/sing-up.module';
 import { HomeModule } from './home/home.module';
 import { SidenavService } from './shared/Sidenav.service';
-
-
+import { DashboardService } from './dashboard/services/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,7 @@ import { SidenavService } from './shared/Sidenav.service';
     SingUpModule,
     HomeModule
   ],
-  providers: [SidenavService],
+  providers: [SidenavService, DashboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

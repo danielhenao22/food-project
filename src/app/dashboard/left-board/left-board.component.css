@@ -1,0 +1,24 @@
+.expansionPanel {
+
+}
+
+.left-panel {
+  width: 65vw;
+  height: 90%;
+  background-color: chartreuse;
+}
+
+.ingredients{
+  background-color: violet;
+  width: 40%;
+}
+
+.information{
+  display: flex;
+  flex-direction: row;
+}
+
+.quantity{
+  background-color: teal;
+  width: 50%;
+}
