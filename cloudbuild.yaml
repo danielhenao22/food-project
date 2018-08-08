@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm:latest'
+  args: ['version']
+  id: 'npm-version'
+
+- name: 'gcr.io/cloud-builders/npm:latest'
+  args: ['install']
+  id: 'npm-install'
+
+- name: 'gcr.io/cloud-builders/npm:latest'
+  args: ['run-script', 'build']
+  id: 'npm-build'
