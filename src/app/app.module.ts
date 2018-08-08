@@ -11,8 +11,6 @@ import { SingUpModule } from './sing-up/sing-up.module';
 import { HomeModule } from './home/home.module';
 import { SidenavService } from './shared/Sidenav.service';
 
-
-
 @NgModule({
   declarations: [
     AppComponent

@@ -10,3 +10,4 @@ steps:
 - name: 'gcr.io/cloud-builders/npm:latest'
   args: ['run-script', 'build']
   id: 'npm-build'
+  
