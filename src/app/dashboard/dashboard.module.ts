@@ -7,6 +7,7 @@ import { RightBoardComponent } from './right-board/right-board.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 const routes: Routes = [{ path: '', component: DashboardComponent }];
 @NgModule({
@@ -15,6 +16,7 @@ const routes: Routes = [{ path: '', component: DashboardComponent }];
     MatExpansionModule,
     MatInputModule,
     MatFormFieldModule,
+    InfiniteScrollModule,
     RouterModule.forChild(routes)
   ],
   declarations: [DashboardComponent, LeftBoardComponent, RightBoardComponent],

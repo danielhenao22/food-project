@@ -7,10 +7,15 @@ import 'rxjs/add/observable/of';
   providedIn: 'root'
 })
 export class DashboardService {
-
+  recipesList: any[];
   constructor() { }
 
-  getRecipes(food: string): Observable<any> {
-    return Observable.of(RECIPES);
+  getRecipes(food: string, maxData: number): Observable<any> {
+    this.recipesList = RECIPES;
+    if (maxData < this.recipesList.length) {
+      return Observable.of(this.recipesList.slice(0, maxData));
+    } else {
+      return Observable.of(RECIPES);
+    }
   }
 }

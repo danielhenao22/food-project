@@ -1,24 +1,54 @@
-.expansionPanel {
-
-}
+.expansionPanel {}
 
 .left-panel {
   width: 65vw;
   height: 90%;
-  background-color: chartreuse;
+  background-color:rgba(235, 229, 235, 0.986);;
+  overflow: auto;
 }
 
-.ingredients{
-  background-color: violet;
+.ingredients {
   width: 40%;
 }
 
-.information{
+.information {
   display: flex;
   flex-direction: row;
 }
 
-.quantity{
-  background-color: teal;
+.quantity {
   width: 50%;
+}
+
+.search-results {
+  height: 100%;
+  overflow: scroll;
+}
+
+.mat-expansion-panel-header-title {
+  flex-direction: column;
+  text-align: center;
+  background-color: chocolate;
+  width: 150px;
+  height: 200px;
+}
+
+.imageHeader {
+  width: 100%;
+  height: 200px;
+}
+
+.header {
+  background-color:rgba(235, 229, 235, 0.986);
+}
+
+.mat-expansion-panel-header-description{
+  display: table;
+}
+.mat-expansion-panel-header{
+  padding-left: 0px;
+  align-items: start;
+}
+.price{
+  text-align: end;
 }

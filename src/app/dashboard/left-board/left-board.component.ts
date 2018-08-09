@@ -8,15 +8,26 @@ import { DashboardService } from './../services/dashboard.service';
 })
 export class LeftBoardComponent implements OnInit {
   panelOpenState = false;
-  constructor(private dashboardService: DashboardService) { }
   recipesList: any[];
   food = '';
-  ngOnInit() {
-    this.loadRecipesList();
-    console.log(this.recipesList);
+  finished = false;
+  maxData = 10;
+  // path = 'http://mx.emedemujer.com/wp-content/uploads/sites/5/2015/10/receta3-770x507.jpg';
+  path = 'https://source.unsplash.com/random';
+
+  constructor(private dashboardService: DashboardService) {
+
   }
 
+  ngOnInit() {
+   this.loadRecipesList();
+  }
   loadRecipesList() {
-    this.dashboardService.getRecipes(this.food).subscribe(value => this.recipesList = value);
+    this.dashboardService.getRecipes(this.food, this.maxData).subscribe(value => this.recipesList = value);
+  }
+
+  onScroll() {
+        this.maxData += 5;
+        this.dashboardService.getRecipes(this.food, this.maxData).subscribe(value => this.recipesList = value);
   }
 }
