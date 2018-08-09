@@ -1,0 +1,75 @@
+.general {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f39726e7;
+}
+
+.login-background{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
+  filter: blur(1px);
+}
+
+.container {
+  height: 80vh;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 10px;
+}
+
+.mat-tab {
+  width: 100%;
+  height: 100%;
+}
+
+.tab {
+  width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 80vh;
+}
+
+.image{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.inputs {
+  margin-right: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #5c5c5c !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #ec9931;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #ec9931;
+}
