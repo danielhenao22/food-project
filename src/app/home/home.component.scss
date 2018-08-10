@@ -1,0 +1,44 @@
+.general {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.option {
+  width: 100%;
+  height: 94vh;
+  transition: 0.3s;
+  overflow: hidden !important;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+img {
+  transition: 0.3s;
+  filter: blur(3px) contrast(95%);
+
+}
+
+.option:hover {
+  width: 120%;
+  img {
+    filter: blur(0px);
+    opacity: 0.5;
+  }
+}
+
+.smallimage{
+  transform: scale(1.8);
+}
+
+label {
+  position: absolute !important;
+  font-size: 40px;
+  color: white;
+  z-index: 9;
+  text-shadow: 3px 3px 10px #000000;
+}

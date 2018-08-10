@@ -1,6 +1,9 @@
 <mat-sidenav-container class="account-container" (backdropClick)="close()">
   <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
-    <button mat-button (click)="close()">Close</button>
+      <p>
+          <i class="fas fa-times closeIcon" (click)="close()"></i>
+      </p>
+      <app-sidebar></app-sidebar>
     <div class="content"></div>
   </mat-sidenav>
   <mat-sidenav-content>
