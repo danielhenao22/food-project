@@ -10,6 +10,14 @@
       <div class="forms">
         <mat-tab-group>
           <mat-tab label="Ingresar">
+            <form [formGroup]="firstFormGroup" class="login-form">
+              <mat-form-field class="login-input">
+                <input matInput placeholder="Email">
+              </mat-form-field>
+              <mat-form-field type="password" class="login-input">
+                <input matInput placeholder="Contraseña">
+              </mat-form-field>
+            </form>
           </mat-tab>
           <mat-tab label="Registrarse">
             <mat-vertical-stepper [linear]="isLinear" #stepper class="stepper">
