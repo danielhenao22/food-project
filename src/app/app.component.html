@@ -6,5 +6,14 @@
   <mat-sidenav-content>
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
+      <p>
+          <i class="fas fa-times closeIcon" (click)="close()"></i>
+      </p>
+      <app-sidebar></app-sidebar>
+    <div class="content"></div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

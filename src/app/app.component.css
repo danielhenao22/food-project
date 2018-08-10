@@ -9,3 +9,11 @@
 .content {
   width: 300px !important;
 }
+
+.closeIcon{
+  font-size: 1.5rem;
+  margin: 1rem;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
