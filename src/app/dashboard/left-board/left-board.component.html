@@ -1,3 +1,46 @@
-<p>
-  left-board works!
-</p>
+<div class="left-panel" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()"
+  [scrollWindow]="false">
+  <div class="expansionPanel">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let recipe of recipesList" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header class="header" collapsedHeight="200px" expandedHeight="204px">
+          <mat-panel-title>
+            <div>
+              <img mat-card-image class="imageHeader" [src]="path">
+            </div>
+          </mat-panel-title>
+          <mat-panel-description>
+            <br>
+            <h2>{{recipe.name}}</h2>
+            <br>
+            <h4>{{recipe.description}} {{panelOpenState ? 'opena' : 'closed'}}</h4>
+          </mat-panel-description>
+          <mat-panel-description class="price">
+            <br>
+            <h2>${{recipe.price}}</h2>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="information" *ngFor="let ingredient of recipe.ingredients">
+          <h3 class="ingredients">{{ingredient.name}}</h3>
+          <h3 class="quantity"> {{ingredient.quantity}} units </h3>
+        </div>
+      </mat-expansion-panel>
+
+
+
+      <!--
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Self aware panel
+          </mat-panel-title>
+          <mat-panel-description>
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    -->
+    </mat-accordion>
+  </div>
+</div>

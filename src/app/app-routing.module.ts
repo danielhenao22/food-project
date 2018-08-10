@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomeModule' },
   { path: 'login', loadChildren:  './login/login.module#LoginModule'},
   { path: 'registry', loadChildren: './sing-up/sing-up.module#SingUpModule' },
-  { path: 'main', loadChildren:  './dashboard/main-cart.module#MainCartModule'}
+  { path: 'main', loadChildren:  './dashboard/dashboard.module#DashboardModule'}
 ];
 
 @NgModule({
