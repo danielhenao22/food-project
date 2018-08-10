@@ -7,7 +7,7 @@
     <div class="content"></div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-navbar></app-navbar>
+    <app-navbar *ngIf="canShowNavBar() | async"></app-navbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

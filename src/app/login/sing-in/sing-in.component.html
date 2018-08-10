@@ -1,3 +1,74 @@
-<p>
-  sing-in works!
-</p>
+<div class="general">
+  <img src="../../../assets/fondo-login.jpg" class="login-background">
+  <div class="container">
+    <div class="tab">
+      <div class="imageContainer">
+        <img class="image" src="../../../assets/login-chef.jpg">
+      </div>
+    </div>
+    <div class="tab">
+      <div class="forms">
+        <mat-tab-group>
+          <mat-tab label="Ingresar">
+            <form [formGroup]="firstFormGroup" class="login-form">
+              <mat-form-field class="login-input">
+                <input matInput placeholder="Email">
+              </mat-form-field>
+              <mat-form-field type="password" class="login-input">
+                <input matInput placeholder="Contraseña">
+              </mat-form-field>
+            </form>
+          </mat-tab>
+          <mat-tab label="Registrarse">
+            <mat-vertical-stepper [linear]="isLinear" #stepper class="stepper">
+              <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup" class="section">
+                  <ng-template matStepLabel>Informacion personal</ng-template>
+                  <mat-form-field class="inputs">
+                    <input matInput placeholder="Nombres" formControlName="namesCtrl" required>
+                  </mat-form-field>
+                  <mat-form-field class="inputs">
+                    <input matInput placeholder="Apellidos" formControlName="lastnamesCtrl" required>
+                  </mat-form-field>
+                  <mat-form-field class="inputs">
+                    <input matInput placeholder="Email" formControlName="emailCtrl" required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-button matStepperNext>Siguiente</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup" class="section">
+                  <ng-template matStepLabel>Direccion</ng-template>
+                  <mat-form-field class="inputs">
+                    <input matInput placeholder="Nombre direccion ej: Mi casa" formControlName="addressNameCtrl" required>
+                  </mat-form-field>
+                  <mat-form-field class="inputs">
+                    <input matInput placeholder="Direccion" formControlName="addressCtrl" required>
+                  </mat-form-field>
+                  <mat-form-field class="inputs">
+                    <input matInput placeholder="Referencia" formControlName="referencesCtrl" required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-button matStepperPrevious>Atras</button>
+                    <button mat-button matStepperNext>Siguiente</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>¡Ya casi!</ng-template>
+                <mat-checkbox>Acepto los terminos y condiciones</mat-checkbox>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button (click)="stepper.reset()">Registrarme</button>
+                </div>
+              </mat-step>
+            </mat-vertical-stepper>
+
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>
